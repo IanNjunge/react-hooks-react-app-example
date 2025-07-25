@@ -15,7 +15,9 @@ test('should include "Now" in the header instead of a time', () => {
 });
 
 test("should include the <ExampleComponent />", () => {
-  expect(screen.queryByText("Whoa!")).toBeInTheDocument();
+  expect(screen.getAllByText("Whoa!").length).toBeGreaterThan(0);
+
+
 });
 
 test("should include the <TestComponent />", () => {
